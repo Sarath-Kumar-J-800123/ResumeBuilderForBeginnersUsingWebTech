@@ -1,0 +1,77 @@
+@charset "ISO-8859-1";
+* {
+    scroll-behavior: smooth;
+    /*font-family: sans-serif;*/
+}
+html,
+body {
+
+  font-size: 1rem;
+  font-family: "Timers New Roman", Timer, serif;
+  font-style: bold;
+  background-color: black;
+  background-size: cover;
+  
+}
+
+.features h1 {
+  margin: 0rem 0rem 2rem 0rem;
+  text-align: center;
+}
+.page {
+  margin-top: 2.5rem;
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.page-title {
+  margin: 4rem 0rem 2.5rem 7rem;
+}
+.page-title-para {
+  margin: 0.5rem 0rem 2.5rem 7rem;
+}
+.dev .card{
+  width:350px; 
+  height:500px; 
+  box-shadow:2px 2px 14px 3px #726c6c;
+  background-color:rgb(240, 240, 240);
+  align-content: center;
+  align-items: center;
+  align-self: 
+center;
+}
+.page-header {
+  margin-top: 3.5rem;
+  font-size: 40px;
+  color: teal;
+}
+.page-header p {
+  margin-left: 50rem;
+  padding: 10rem 5rem 0rem 0rem;
+}
+.page-header button {
+  margin-left: 50rem;
+}
+
+.page.dev{
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%,0 100%);
+}
+#mtd{
+	border-radius: 30px;
+}
+#img{
+	border-radius: 30px;
+}
+#letters{
+	border-radius: 30px;
+}
+.icons{
+	border-radius: 10px;
+	border:5px solid green;
+	border-color: orange;
+	background-color: black;
+}
+#div{
+	border-radius: 30px;
+	background-color: teal;
+}
