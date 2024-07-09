@@ -11,18 +11,6 @@ body {
  
   padding-top: 5rem;
 }
-.header {
-  padding: 5rem;
-  text-align: center;
-  background-color: #565353;
-}
-
-li {
-  padding-left: 2.5rem;
-}
-.header h1 {
-  margin-top: 2.5rem;
-}
 nav li a:hover {
   background-color: yellow;
   border-radius: 30px;
