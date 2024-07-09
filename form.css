@@ -16,10 +16,7 @@ body {
   text-align: center;
   background-color: #565353;
 }
-nav li a:hover {
-  background-color: yellow;
-  border-radius: 30px;
-}
+
 li {
   padding-left: 2.5rem;
 }
