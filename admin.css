@@ -75,3 +75,25 @@ center;
 	border-radius: 30px;
 	background-color: teal;
 }
+.index{
+	background-color: black;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 350px;
+	font-style: bold;
+	cursor: pointer;
+}
+.index a:hover{
+	color: orange;
+    cursor: pointer;
+}
+.index a{
+	
+    text-decoration: none;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
