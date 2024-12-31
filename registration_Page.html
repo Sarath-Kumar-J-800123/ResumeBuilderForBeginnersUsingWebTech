@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="images/Registration.jpeg" type="image/x-icon">
+<title>Registration Form</title>
+<script
+	src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="css/style_Sheet.css">
+</head>
+<body style="background-color: #6D7B6C"><br><br><br><br>
+
+	<div class="container">
+		<div class="card"  style="border: 10px solid #6FFBD8; border-radius: 20px; background-color: #06A5D9" >
+			<form>
+			<fieldset>
+						<legend align="left"><b style="color: yellow">Registration_Page:-</b></legend>
+				<div class="form-group">
+					<label>Enter Your Name:-</label> <input type="text"
+						class="form-control" id="name" name="name" placeholder="example: Saxxth JSK" pattern="^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$" required style="color: #2B168B">
+				</div>
+				<div class="form-group">
+					<label>Enter Your Email_Id:-</label> <input type="email"
+						class="form-control" id="email" name="email" pattern="/^\w+([.-]?\w+)*@(\w+[.-])+(\w{2,})$/" placeholder="example: saxxth@gmail.com" required style="color: #9F03ED">
+				</div>
+				<div class="form-group">
+					<label>Enter Your Password:-</label> <input type="password"
+						class="form-control" id="password" name="password" placeholder="example: 123 or sa#*123" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required style="color: #2B168B">
+				</div>
+				<div class="text-center">
+					<button type="button" id="reg-btn" class="btn btn-success"
+						onclick="registerUser()"><b style="color: light">Register</b></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button type="reset" id="reg-btn" class="btn btn-primary"><b style="color: black">Reset</b></button>
+				</div>
+			</fieldset>
+			</form><br>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function registerUser()
+	{
+		let name,email,password;
+		name=document.getElementById("name").value;
+		email=document.getElementById("email").value;
+		password=document.getElementById("password").value;
+		
+		let user_records=new Array();
+		user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+			if(user_records.some((v)=>
+				{
+					return v.email==email;
+				} ) )
+				{
+					alert("Your Account already exists!!! Go to LogIn_Page!!!");
+					window.location.href="logIn_Page.html";
+				}
+			else
+				{
+					user_records.push({
+							"name":name,
+							"email":email,
+							"password":password
+					})
+				}
+				localStorage.setItem("users", JSON.stringify (user_records))
+		
+		
+	}
+</script>
+</html>
